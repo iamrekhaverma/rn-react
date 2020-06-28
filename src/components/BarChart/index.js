@@ -1,34 +1,27 @@
-import React, { useEffect } from "react";
-import * as d3 from "d3";
+import React from "react";
 
-const BarChart = ({ w, h, id, data }) => {
-  useEffect(() => {
-    drawChart();
-  });
+import CanvasJSReact from "../../assets/canvasjs.react";
+const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
-  const drawChart = () => {
-    const data = [12, 5, 6, 6, 9, 10];
-
-    const svg = d3
-      .select("body")
-      .append("svg")
-      .attr("width", w)
-      .attr("height", h)
-      .style("margin-left", 100);
-
-    svg
-      .selectAll("rect")
-      .data(data)
-      .enter()
-      .append("rect")
-      .attr("x", (d, i) => i * 70)
-      .attr("y", (d, i) => h - 10 * d)
-      .attr("width", 65)
-      .attr("height", (d, i) => d * 10)
-      .attr("fill", "green");
+const BarChart = () => {
+  const options = {
+    title: {
+      text: "Basic Chart",
+    },
+    data: [
+      {
+        type: "column",
+        dataPoints: [
+          { label: "September", y: 10 },
+          { label: "October", y: 15 },
+          { label: "Novemeber", y: 25 },
+          { label: "December", y: 30 },
+        ],
+      },
+    ],
   };
 
-  return <div id={"#" + id}></div>;
+  return <CanvasJSChart options={options}></CanvasJSChart>;
 };
 
 export default BarChart;

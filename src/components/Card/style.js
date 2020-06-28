@@ -15,7 +15,7 @@ const CardWrapper = styled.div`
     .list__card__row1--col.type {
       background: lightgrey;
       opacity: 0.7;
-      background: ${({ theme }) => theme.primaryDark};
+      background: ${({ theme }) => theme.primaryLight};
       color: #b721ff;
       padding: 3px;
       border-radius: 10px;

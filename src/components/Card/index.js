@@ -4,48 +4,56 @@ import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import CardWrapper from "./style.js";
 
 export const Card = (props) => {
+  const { data } = props;
+  console.log("data is ", data);
+
   return (
     <CardWrapper>
-      <div className="list__card">
-        <div className="list__card--header">
-          <div className="list__card__row">
-            <div className="list__card__row1--col name">Vedic chai</div>
-            <div className="list__card__row1--col type">Product</div>
-            <div className="list__card__row1--col">
-              <FontAwesomeIcon icon={faEdit} />
+      {data &&
+        data.items.map((item) => {
+          return (
+            <div className="list__card" key={item.id}>
+              <div className="list__card--header">
+                <div className="list__card__row">
+                  <div className="list__card__row1--col name">{item.name}</div>
+                  <div className="list__card__row1--col type">{item.type}</div>
+                  <div className="list__card__row1--col">
+                    <FontAwesomeIcon icon={faEdit} />
+                  </div>
+                </div>
+                <div className="sku">
+                  <span>SKU:</span>
+                  {item.sku}
+                </div>
+              </div>
+              <div className="list__card__row">
+                <div className="hsn">
+                  <div>HSN number</div>
+                  <div className="text">{item.hsn}</div>
+                </div>
+                <div className="seperator"></div>
+                <div className="price">
+                  <div>Item Price</div>
+                  <div className="text">{item.itemPrice}</div>
+                </div>
+              </div>
+              <div className="list__card__row">
+                <div className="list__card__row3__col">
+                  <div>Tax Rate</div>
+                  <div>{item.taxRate}</div>
+                </div>
+                <div className="list__card__row3__col">
+                  <div>Unit</div>
+                  <div className="text">{item.unit}</div>
+                </div>
+                <div className="list__card__row3__col">
+                  <div>Inital stock</div>
+                  <div className="text">{item.initialStock}</div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="sku">
-            <span>SKU:</span>
-            5355353535
-          </div>
-        </div>
-        <div className="list__card__row">
-          <div className="hsn">
-            <div>HSN number</div>
-            <div className="text">1234567</div>
-          </div>
-          <div className="seperator"></div>
-          <div className="price">
-            <div>Item Price</div>
-            <div className="text">300</div>
-          </div>
-        </div>
-        <div className="list__card__row">
-          <div className="list__card__row3__col">
-            <div>Tax Rate</div>
-            <div>777</div>
-          </div>
-          <div className="list__card__row3__col">
-            <div>Unit</div>
-            <div className="text">7778</div>
-          </div>
-          <div className="list__card__row3__col">
-            <div>Inital stock</div>
-            <div className="text">0077</div>
-          </div>
-        </div>
-      </div>
+          );
+        })}
     </CardWrapper>
   );
 };

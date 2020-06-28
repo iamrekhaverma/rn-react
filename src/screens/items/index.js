@@ -2,8 +2,8 @@ import React from "react";
 import { useHistory } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faChevronDown,
-  faFilter,
+  // faChevronDown,
+  // faFilter,
   faChevronLeft,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
@@ -26,7 +26,7 @@ const Items = (props) => {
         leftIcon={<FontAwesomeIcon icon={faChevronLeft} onClick={goToHome} />}
         action={<FontAwesomeIcon icon={faSearch} />}
       />
-      <header className="layout-row">
+      {/* <header className="layout-row">
         <div>
           <span>Sort by</span>
           <FontAwesomeIcon icon={faChevronDown} />
@@ -35,7 +35,7 @@ const Items = (props) => {
           <span>Filter</span>
           <FontAwesomeIcon icon={faFilter} />
         </div>
-      </header>
+      </header> */}
       <Card data={data} />
       <div className="footer-btn">
         <Button type="primary" shape="round">

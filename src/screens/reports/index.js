@@ -3,23 +3,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 import TopNavBar from "../../components/TopNavBar";
-import HomeWrapper from "./style";
+import ReportsWrapper from "./style";
 import { useHistory } from "react-router-dom";
 import { TotalCard } from "../../components/Card";
-import { AccordionItem } from "../../components/accordion";
+import { AccordionItem } from "../../components/Accordion";
 import {
   INVOICE_REPORTS_CHIPS,
   PAYMENT_REPORTS_CHIPS,
 } from "../../util/app-constants";
 
 const Reports = (props) => {
-  console.log("props----->", props);
   const history = useHistory();
   const goToHome = () => {
     history.push("/");
   };
   return (
-    <HomeWrapper>
+    <ReportsWrapper>
       <TopNavBar
         title="Payment Reports"
         leftIcon={<FontAwesomeIcon icon={faChevronLeft} onClick={goToHome} />}
@@ -37,7 +36,11 @@ const Reports = (props) => {
             amount="INR2000000"
           />
         </div>
-        <div className="record-payment">Total Due Amount</div>
+        <div className="layout-row total-due">
+          <div className="">Total Due Amount</div>
+          <div className="inr"> INR 100000000</div>
+        </div>
+
         <div>
           <h5> Get Reports</h5>
           <AccordionItem title="Invoice Reports" />
@@ -62,7 +65,7 @@ const Reports = (props) => {
           </div>
         </div>
       </div>
-    </HomeWrapper>
+    </ReportsWrapper>
   );
 };
 export default Reports;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const HomeWrapper = styled.div`
+const ReportsWrapper = styled.div`
   .total-row {
     display: flex;
     justify-content: space-between;
@@ -38,16 +38,21 @@ const HomeWrapper = styled.div`
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
   }
+  .total-due {
+    margin: 25px 0;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    border-radius: 10px;
+  }
   .chips {
     display: flex;
-    /* border-radius: 10px; */
     flex-wrap: wrap;
+    margin-bottom: 30px;
     .chip {
       background: lightgray;
       padding: 6px;
       border-radius: 10px;
       font-size: 12px;
-      /* width: 95px; */
       margin: 4px;
     }
   }
@@ -57,15 +62,6 @@ const HomeWrapper = styled.div`
     padding: 16px;
     border-radius: 10px;
   }
-  .revenue-card {
-    border: solid #1890ff;
-    margin-top: 25px;
-    .row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 16px;
-    }
-  }
 `;
 
-export default HomeWrapper;
+export default ReportsWrapper;

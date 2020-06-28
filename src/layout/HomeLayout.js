@@ -1,18 +1,20 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faClock } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 
 import TopNavBar from "../components/TopNavBar";
 import BottomNavBar from "../components/BottomNavBar";
 import HomeWrapper from "./style";
 import HamburgerMenu from "react-hamburger-menu";
-import { NavLink } from "react-router-dom";
 import { COMMON_NAVBAR_LINKS } from "../util/app-constants";
 import { TotalCard } from "../components/Card";
 import { TabsMenu } from "../components/Tabs";
+import BarChart from "../components/BarChart";
 
 const HomeLayout = (props) => {
-  console.log("props----->", props);
+  const { t } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const openMenu = () => {
     setMenuOpen(!menuOpen);
@@ -41,7 +43,6 @@ const HomeLayout = (props) => {
               </div>
             )}
             <HamburgerMenu
-              // color=
               isOpen={menuOpen}
               menuClicked={() => openMenu()}
               height={15}
@@ -63,9 +64,9 @@ const HomeLayout = (props) => {
             amount="INR2000000"
           />
         </div>
-        <div className="record-payment">Record Payment</div>
+        <div className="record-payment">{t("_record_payment")}</div>
         <div className="accordian-item">
-          <div>Oldest Invoice</div>
+          <div>{t("_oldest_invoice_")}</div>
           <div>27 Days</div>
           <div>
             <FontAwesomeIcon icon={faChevronRight} />
@@ -73,11 +74,12 @@ const HomeLayout = (props) => {
         </div>
         <div className="revenue-card">
           <div className="row">
-            <div>Total Revenue</div>
+            <div>{t("_total_revenue")}</div>
             <div>278887878</div>
           </div>
           <div className="">
             <TabsMenu />
+            <BarChart />
           </div>
         </div>
         <div>1</div>

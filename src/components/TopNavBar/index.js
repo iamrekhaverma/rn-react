@@ -4,7 +4,6 @@ import { withRouter } from "react-router";
 import TopNavBarWrapper from "./style";
 
 const TopNavBar = ({ title, leftIcon, action }) => {
-  console.log("action", leftIcon);
   return (
     <TopNavBarWrapper>
       <div className="top__nav__bar">

@@ -26,8 +26,9 @@ const BottomNavBarWrapper = styled.div`
     height: 65px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 14px 0px;
     .route {
-      color: black;
+      color: dimgrey;
       display: flex;
+      font-size: 10px;
       align-items: center;
       justify-content: center;
       padding: 10px;

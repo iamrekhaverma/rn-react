@@ -9,7 +9,10 @@
       "_total_revenue": "Total Revenue",
       "_my_report": "My Reports",
       "_statemnet_report": "Statement Report",
-      "_invoice_report": "Invoice Report"
+      "_invoice_report": "Invoice Report",
+      "_record_payment": "Record Payment",
+      "_oldest_invoice_": "Oldest Invoice",
+      "_default_title": "Welcome, Kumar"
     }
   }
 }

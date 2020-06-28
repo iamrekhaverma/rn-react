@@ -47,6 +47,7 @@ const HomeWrapper = styled.div`
   .revenue-card {
     border: solid #1890ff;
     margin-top: 25px;
+    margin-bottom: 60px;
     .row {
       display: flex;
       justify-content: space-between;

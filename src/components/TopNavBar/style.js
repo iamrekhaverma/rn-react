@@ -11,6 +11,7 @@ const TopNavBarWrapper = styled.div`
     .top__nav__bar--title {
       font-weight: bold;
       font-size: 16px;
+      color: ${({ theme }) => theme.primaryDark};
     }
   }
 `;

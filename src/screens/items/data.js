@@ -1,6 +1,7 @@
 export const data = {
   items: [
     {
+      id: "1",
       name: "Vedic Chai",
       type: "Product",
       sku: "1212121212121",
@@ -11,6 +12,7 @@ export const data = {
       initialStock: 123,
     },
     {
+      id: "2",
       name: "Vedic Chai",
       type: "Product",
       sku: "1212121212121",
@@ -21,6 +23,7 @@ export const data = {
       initialStock: 123,
     },
     {
+      id: "3",
       name: "Vedic Chai",
       type: "Service",
       sku: "1212121212121",
