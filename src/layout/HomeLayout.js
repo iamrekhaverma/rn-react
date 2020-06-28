@@ -9,6 +9,7 @@ import HamburgerMenu from "react-hamburger-menu";
 import { NavLink } from "react-router-dom";
 import { COMMON_NAVBAR_LINKS } from "../util/app-constants";
 import { TotalCard } from "../components/Card";
+import { TabsMenu } from "../components/Tabs";
 
 const HomeLayout = (props) => {
   console.log("props----->", props);
@@ -75,12 +76,9 @@ const HomeLayout = (props) => {
             <div>Total Revenue</div>
             <div>278887878</div>
           </div>
-          <div className="row">
-            <div>Weekly</div>
-            <div>Month</div>
-            <div>Year</div>
+          <div className="">
+            <TabsMenu />
           </div>
-          <div>Graph</div>
         </div>
         <div>1</div>
       </div>

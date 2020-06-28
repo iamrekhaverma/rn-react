@@ -1,22 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { withRouter } from "react-router";
-import {
-  HomeOutlined,
-  SettingFilled,
-  PlusSquareFilled,
-} from "@ant-design/icons";
+import { SettingFilled } from "@ant-design/icons";
 
 import BottomNavBarWrapper from "./style";
-import { Button } from "antd";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faPlusSquare,
   faPlus,
   faHome,
   faFileInvoice,
   faMoneyBill,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const BottomNavBar = () => {
   const getRoute = (id) => {
@@ -56,14 +50,14 @@ const BottomNavBar = () => {
     {
       id: 3,
       to: "/items",
-      // name: "Invoices",
+      name: "",
       exact: true,
       className: "plus",
       component: <FontAwesomeIcon icon={faPlus} />,
     },
     {
       id: 4,
-      to: "/learnings",
+      to: "/bills",
       name: "Bills",
       exact: false,
       common: true,

@@ -5,8 +5,9 @@ import { ThemeProvider } from "styled-components";
 import "./App.css";
 import HomeLayout from "./layout/HomeLayout";
 import Items from "./screens/items";
-import Reports from "./screens/reports";
+import PaymentReports from "./screens/payment-reports";
 import { theme } from "./theme";
+import Reports from "./screens/reports";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Switch>
             <Route path="/items" component={Items} />
             <Route path="/reports" component={Reports} />
+            <Route path="/payment-reports" component={PaymentReports} />
             <Route path="/" component={HomeLayout} />
           </Switch>
         </ThemeProvider>

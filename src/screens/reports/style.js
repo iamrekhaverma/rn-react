@@ -1,51 +1,71 @@
 import styled from "styled-components";
 
-const ReportsWrapper = styled.div`
-  .container {
-    max-width: 700px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 10px;
+const HomeWrapper = styled.div`
+  .total-row {
+    display: flex;
+    justify-content: space-between;
   }
-  .accordion-item {
+  .main {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    .small_menu.layout-column {
+      width: 160px;
+      z-index: 100;
+      top: 50px;
+      filter: drop-shadow(rgb(59, 149, 203) 1px 4px 5px);
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(0, 50, 112);
+      border-image: initial;
+      padding: 5px;
+      background: rgb(255, 255, 255);
+      border-radius: 5px;
+      position: absolute;
+      left: 5px;
+    }
+  }
+
+  .dues {
+    margin: auto;
+    padding: 25px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  }
+  .accordian-item {
+    display: flex;
+    padding: 13px;
+    justify-content: space-between;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-
-    &__title {
-      display: flex;
-      margin: 0;
-      padding: 0;
-      justify-content: space-between;
-      align-items: center;
-      line-height: 1;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    &__arrow {
-      fill: darkgray;
-    }
-
-    &__content {
-      display: none;
-      overflow: hidden;
+  }
+  .chips {
+    display: flex;
+    /* border-radius: 10px; */
+    flex-wrap: wrap;
+    .chip {
+      background: lightgray;
+      padding: 6px;
+      border-radius: 10px;
+      font-size: 12px;
+      /* width: 95px; */
+      margin: 4px;
     }
   }
-
-  .entry {
-    line-height: 1.74;
-
-    p {
-      &:last-of-type,
-      &:last-child {
-        margin-bottom: 0;
-      }
+  .record-payment {
+    margin: 25px 0;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    border-radius: 10px;
+  }
+  .revenue-card {
+    border: solid #1890ff;
+    margin-top: 25px;
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
     }
   }
 `;
 
-export default ReportsWrapper;
+export default HomeWrapper;

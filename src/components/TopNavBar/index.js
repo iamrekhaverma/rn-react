@@ -1,12 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCoffee,
-  faChevronLeft,
-  faSearch,
-  faBars,
-} from "@fortawesome/free-solid-svg-icons";
+
 import TopNavBarWrapper from "./style";
 
 const TopNavBar = ({ title, leftIcon, action }) => {

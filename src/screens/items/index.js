@@ -1,6 +1,5 @@
 import React from "react";
-import TopNavBar from "../../components/TopNavBar";
-import { Card } from "../../components/Card";
+import { useHistory } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronDown,
@@ -8,13 +7,14 @@ import {
   faChevronLeft,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
-import { data } from "./data";
 import { Button } from "antd";
+
+import TopNavBar from "../../components/TopNavBar";
+import { Card } from "../../components/Card";
+import { data } from "./data";
 import ItemsWrapper from "./style";
-import { useHistory } from "react-router";
 
 const Items = (props) => {
-  console.log("props----->", props);
   const history = useHistory();
   const goToHome = () => {
     history.push("/");
@@ -26,8 +26,7 @@ const Items = (props) => {
         leftIcon={<FontAwesomeIcon icon={faChevronLeft} onClick={goToHome} />}
         action={<FontAwesomeIcon icon={faSearch} />}
       />
-      <div className="application-base">{props.children}</div>
-      <header style={{ display: "flex", "justify-content": "space-between" }}>
+      <header className="layout-row">
         <div>
           <span>Sort by</span>
           <FontAwesomeIcon icon={faChevronDown} />
@@ -43,7 +42,6 @@ const Items = (props) => {
           Add Item
         </Button>
       </div>
-      {/* <BottomNavBar /> */}
     </ItemsWrapper>
   );
 };
