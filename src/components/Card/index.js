@@ -1,46 +1,63 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
+import CardWrapper from "./style.js";
 
-const Card = (props) => {
+export const Card = (props) => {
   return (
-    <React.Fragment>
+    <CardWrapper>
       <div className="list__card">
         <div className="list__card--header">
-          <div className="list__card__row1">
-            <div className="list__card__row1--col1">Vedic chai</div>
-            <div className="list__card__row1--col2">Product</div>
-            <div className="list__card__row1--col3">
+          <div className="list__card__row">
+            <div className="list__card__row1--col name">Vedic chai</div>
+            <div className="list__card__row1--col type">Product</div>
+            <div className="list__card__row1--col">
               <FontAwesomeIcon icon={faEdit} />
             </div>
           </div>
+          <div className="sku">
+            <span>SKU:</span>
+            5355353535
+          </div>
         </div>
-        <div className="list__card__row2">
+        <div className="list__card__row">
           <div className="hsn">
-            <span>HSN number</span>
-            1234567
+            <div>HSN number</div>
+            <div className="text">1234567</div>
           </div>
+          <div className="seperator"></div>
           <div className="price">
-            <span>Item Price</span>
-            20
+            <div>Item Price</div>
+            <div className="text">300</div>
           </div>
         </div>
-        <div className="list__card__row3">
-          <div className="list__card__row3__col1">
-            <span>Tax Rate</span>
-            1234567
+        <div className="list__card__row">
+          <div className="list__card__row3__col">
+            <div>Tax Rate</div>
+            <div>777</div>
           </div>
-          <div className="list__card__row3__col2">
-            <span>Unit</span>
-            20
+          <div className="list__card__row3__col">
+            <div>Unit</div>
+            <div className="text">7778</div>
           </div>
-          <div className="list__card__row3__col2">
-            <span>Inital stock</span>
-            20
+          <div className="list__card__row3__col">
+            <div>Inital stock</div>
+            <div className="text">0077</div>
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </CardWrapper>
   );
 };
-export default Card;
+
+export const TotalCard = ({ icon, title, amount }) => {
+  return (
+    <CardWrapper>
+      <div className="dues">
+        <div>{icon}</div>
+        <div>{title}</div>
+        <div>{amount}</div>
+      </div>
+    </CardWrapper>
+  );
+};

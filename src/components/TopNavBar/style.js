@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const TopNavBarWrapper = styled.div`
   .top__nav__bar {
+    margin-bottom: 22px;
     display: flex;
     justify-content: space-between;
     padding: 19px;
