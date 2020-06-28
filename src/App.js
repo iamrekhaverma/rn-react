@@ -9,6 +9,9 @@ import PaymentReports from "./screens/payment-reports";
 import { theme } from "./theme";
 import Reports from "./screens/reports";
 
+// Localization
+import "./i18n/i18n";
+
 function App() {
   return (
     <div className="App">

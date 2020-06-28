@@ -1,0 +1,15 @@
+{
+  "en": {
+    "translation": {
+      "_get_reports_": "Get Reports",
+      "_invoice_reports": "Invoice Reports",
+      "_payment_reports_": "Payment Reports",
+      "_total_due_amount_": "Total due amount",
+      "_total_invoices_": "Total Invoice",
+      "_total_revenue": "Total Revenue",
+      "_my_report": "My Reports",
+      "_statemnet_report": "Statement Report",
+      "_invoice_report": "Invoice Report"
+    }
+  }
+}
